@@ -1,16 +1,13 @@
-<div ng-app="userApp" ng-controller="UserCtrl" class="container">
+<div ng-app="userApp" ng-controller="UserCtrl" class="container welcome">
   <div class="jumbotron">
-  <h2>Welcome!</h2>
+  <h1>Concentration Flags</h1>
+  <p>Part 1: A card-matching game to test your memory</p>
+  <p>Part 2: A quiz to test your knowledge of world flags</p>
   </div>
 
-  <ul id="users">
-  <li ng-repeat="user in users">
-    <strong>{{ user.username }}</strong>
-  </li>
-  </ul>
-
   <form ng-submit="addUser()">
-    <input type="text" ng-model="username" placeholder="enter a username" autofocus>
-    <button class="btn btn-lg btn-primary" type="submit" >Play</button>
+    <input type="text" ng-model="username" class="username" placeholder="enter a username" autofocus>
+    <br>
+    <button class="btn btn-primary" type="submit" >PLAY</button>
   </form>
 </div>

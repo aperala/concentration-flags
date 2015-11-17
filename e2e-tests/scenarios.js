@@ -11,19 +11,19 @@ describe('my app', function() {
   });
 
 
-  // describe('view1', function() {
+  describe('welcome', function() {
 
-  //   beforeEach(function() {
-  //     browser.get('index.html#/view1');
-  //   });
+    beforeEach(function() {
+      browser.get('index.html#/welcome');
+    });
 
 
-  //   it('should render view1 when user navigates to /view1', function() {
-  //     expect(element.all(by.css('[ng-view] p')).first().getText()).
-  //       toMatch(/partial for view 1/);
-  //   });
+    it('should render welcome when user navigates to /welcome', function() {
+      expect(element.all(by.css('[ng-view] h1')).first().getText()).
+        toMatch(/Concentration Flags/);
+    });
 
-  // });
+  });
 
 
 

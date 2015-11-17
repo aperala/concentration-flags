@@ -1,4 +1,24 @@
 /* app css stylesheet */
+.btn {
+  cursor: pointer;
+  padding: 15px 45px;
+  text-align: center;
+  margin: 30px auto;
+  font-size: 24px;
+  background-color: #fff;
+  color: #28aadc;
+  border: 3px solid #28aadc;
+}
+
+.btn:hover {
+  background-color: #28aadc;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  text-align: center;
+}
 
 .menu {
   list-style: none;
@@ -27,4 +47,8 @@
 .menu > li:nth-child(1):before {
   content: "";
   padding: 0;
+}
+
+.username {
+  height: 2em;
 }

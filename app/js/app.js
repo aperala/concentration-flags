@@ -5,6 +5,7 @@ var concentrationFlags = angular.module('concentrationFlags', [
   'ngRoute',
   'concentrationFlags.version',
   'userApp',
+  'memoryGame',
   'firebase'
 ]);
 
@@ -14,6 +15,10 @@ concentrationFlags.config(['$routeProvider', function($routeProvider) {
         templateUrl: 'partials/welcome.html',
         controller: 'UserCtrl'
       }).
+    when('/memory', {
+      templateUrl: 'partials/memory.html',
+      controller: 'MemoryGameCtrl'
+    }).
     otherwise({
       redirectTo: '/welcome'
     });

@@ -14,8 +14,8 @@ userApp.factory("users", ["$firebaseArray",
 ]);
 
 // User controller
-userApp.controller('UserCtrl', ["$scope", "users", 
-  function($scope, users){
+userApp.controller('UserCtrl', ["$scope", "users", "$window",
+  function($scope, users, $window){
 
     $scope.users = users;
 
@@ -28,6 +28,7 @@ userApp.controller('UserCtrl', ["$scope", "users",
       id: $scope.user,
       username: $scope.uname
     });
+    $window.location = '#/memory'
     $scope.username = "";
   };
 
