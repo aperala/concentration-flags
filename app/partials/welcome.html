@@ -1,0 +1,16 @@
+<div ng-app="userApp" ng-controller="UserCtrl" class="container">
+  <div class="jumbotron">
+  <h2>Welcome!</h2>
+  </div>
+
+  <ul id="users">
+  <li ng-repeat="user in users">
+    <strong>{{ user.username }}</strong>
+  </li>
+  </ul>
+
+  <form ng-submit="addUser()">
+    <input type="text" ng-model="username" placeholder="enter a username" autofocus>
+    <button class="btn btn-lg btn-primary" type="submit" >Play</button>
+  </form>
+</div>

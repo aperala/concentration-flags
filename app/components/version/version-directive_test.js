@@ -1,7 +1,7 @@
 'use strict';
 
-describe('myApp.version module', function() {
-  beforeEach(module('myApp.version'));
+describe('concentrationFlags.version module', function() {
+  beforeEach(module('concentration-flags.version'));
 
   describe('app-version directive', function() {
     it('should print current version', function() {
