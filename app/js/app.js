@@ -11,7 +11,7 @@ var concentrationFlags = angular.module('concentrationFlags', [
   'concentrationFlags.version',
   'userApp',
   'memoryGame',
-  'concentrationFlagsServices';
+  'concentrationFlagsServices',
   'firebase',
   'underscore'
 ]);
