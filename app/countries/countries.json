@@ -7,7 +7,7 @@
   {"name":"Algeria","alpha-2":"DZ","country-code":"012"},
   {"name":"Andorra","alpha-2":"AD","country-code":"020"},
   {"name":"Angola","alpha-2":"AO","country-code":"024"},
-  {"name":"Antigua and Barbuda","alpha-2":"AG","country-code":"028", "accepted": "Antigua & Barbuda"},
+  {"name":"Antigua and Barbuda","alpha-2":"AG","country-code":"028"},
   {"name":"Argentina","alpha-2":"AR","country-code":"032"},
   {"name":"Armenia","alpha-2":"AM","country-code":"051"},
   {"name":"Aruba","alpha-2":"AW","country-code":"533"},

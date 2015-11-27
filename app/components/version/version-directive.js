@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('concentrationFlags.version.version-directive', [])
+angular.module('flagMatchApp.version.version-directive', [])
 
 .directive('appVersion', ['version', function(version) {
   return function(scope, elm, attrs) {

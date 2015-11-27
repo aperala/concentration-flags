@@ -1,6 +1,6 @@
 'use strict';
 
-describe('concentrationFlags.version module', function() {
+describe('flagMatchApp.version module', function() {
   beforeEach(module('concentration-flags.version'));
 
   describe('app-version directive', function() {
