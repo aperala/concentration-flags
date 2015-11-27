@@ -1,0 +1,21 @@
+<div class="container welcome">
+
+  <div class="jumbotron">
+  <h1>Flag Match Game</h1>
+  <p>Part 1: A game of concentration to test your memory</p>
+  <p>Part 2: A quiz to test your knowledge of world flags</p>
+  </div>
+
+  <div ng-show="authCtrl.error">
+    <span>{{ authCtrl.error }}</span>
+  </div>
+
+  <form ng-submit="authCtrl.login()">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="enter a username" ng-model="authCtrl.players.name" required>
+    </div>
+    <div class="player-name">{{ authCtrl.players.name }}</div>
+    <input type="submit" class="btn" value="PLAY">
+  </form>
+  
+</div>
