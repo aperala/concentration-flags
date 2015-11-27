@@ -5,7 +5,7 @@ angular.module('flagMatchApp')
 
     var Players = {};
 
-    return Players;
+    return players;
   })
 
   
