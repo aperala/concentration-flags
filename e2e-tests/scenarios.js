@@ -4,26 +4,32 @@
 
 describe('my app', function() {
 
-
-  it('should automatically redirect to /welcome when location hash/fragment is empty', function() {
-    browser.get('index.html');
-    expect(browser.getLocationAbsUrl()).toMatch("/welcome");
-  });
-
-
-  describe('welcome', function() {
+  describe('home', function() {
 
     beforeEach(function() {
-      browser.get('index.html#/welcome');
+      browser.get('http://localhost:8000/app/#/');
     });
 
-
-    it('should render welcome when user navigates to /welcome', function() {
-      expect(element.all(by.css('[ng-view] h1')).first().getText()).
-        toMatch(/Concentration Flags/);
+    it('should render home when user navigates to /', function() {
+      expect(element.all(by.css('h1')).first().getText()).
+        toMatch(/Flag Match Game/);
     });
 
-  });
+  }); //end home
+
+  describe('auth', function() {
+
+    beforeEach(function() {
+      browser.get('http://localhost:8000/app/#/');
+    });
+
+    it('should get the player name when input', function() {
+      var input = element(by.model('authCtrl.players.name'));
+      input.sendKeys('Francis');
+      expect(input.getAttribute('value')).toBe('Francis');
+    });
+
+  }); //end auth
 
 
 

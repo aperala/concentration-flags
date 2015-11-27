@@ -16,6 +16,7 @@ angular.module('flagMatchApp', [
       url: '/memory',
       templateUrl: 'partials/memory.html'
     })
+  $urlRouterProvider.otherwise('/');
   })
 
 // Declare app level module which depends on views, and components
