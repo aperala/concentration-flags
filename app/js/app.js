@@ -11,7 +11,8 @@ angular.module('flagMatchApp', [
   'flagMatchApp.version',
   'ui.router',
   'ngResource',
-  'underscore'
+  'underscore',
+  'memoryGame'
   ])
 .config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -22,6 +23,7 @@ angular.module('flagMatchApp', [
     })
     .state('memory', {
       url: '/memory',
+      controller: "MemoryGameCtrl as memoryGameCtrl",
       templateUrl: 'partials/memory.html'
     })
   $urlRouterProvider.otherwise('/');

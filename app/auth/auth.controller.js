@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('flagMatchApp')
-  .controller('AuthCtrl', function (Auth, $state, $scope, Players){
+  .controller('AuthCtrl', function ($state, Auth, $scope, Players){
     var authCtrl = this;
   
     var createPlayer = function(id, name) {

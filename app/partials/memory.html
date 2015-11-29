@@ -3,6 +3,10 @@
   <h1>Concentration</h1>
   <h2>Match the flags</h2>
 
-  
+  <ul>
+    <li ng-repeat="country in countries | filter:query | orderBy:orderProp" >
+      <p>{{ country.name }}</p>
+    </li>
+  </ul>
   
 </div>
