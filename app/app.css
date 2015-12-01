@@ -22,6 +22,45 @@ input {
 .container {
   width: 100%;
   text-align: center;
+  background-color: #2F4F4F;
+}
+
+.card-grid {
+  width: 200px;
+  height: 150px;
+  margin: 20px;
+  display: inline-block;
+}
+
+.card-grid .front, .card-grid .back {
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #efefef;
+  border: 1px solid gray;
+}
+
+.card-grid .front {
+  background-color: pink;
+  background: #fff url(images/globe.jpg) no-repeat center;
+}
+
+.flag-holder {
+  width: 98%;
+  height: 98%;
+  margin: 0 auto;
+}
+
+#grid-wrapper {
+  width: 90%;
+  padding: 40px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#header {
+  background: #fff;
+  padding-bottom: 20px;
 }
 
 .player-name {

@@ -1,12 +1,21 @@
 <div ng-app="flagMatchApp" class="container">
-  <a ui-sref="home">Home</a>
-  <h1>Concentration</h1>
-  <h2>Match the flags</h2>
+  <div id="header">
+    <a ui-sref="home">Home</a>
+    <h1>Concentration</h1>
+    <h2>Match the flags</h2>
+  </div>
+ 
+  <div id="grid-wrapper">
+    <div ng-repeat="country in random_countries" class="card-grid">
+      <div class="front"> 
+      </div> 
+      <div class="back">
+        <div class="flag-holder" ng-style="{ 'background-image': 'url(images/flags/' + country.alpha2.toLowerCase() + '.png'}">
+          {{ country.name }}
+        </div>
+      </div> 
+    </div>
+  </div>
 
-  <ul>
-    <li ng-repeat="country in random_countries" >
-      <p>{{ country.name }}, {{ country.alpha2 }}</p>
-    </li>
-  </ul>
   
 </div>
