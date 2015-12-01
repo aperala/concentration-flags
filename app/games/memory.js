@@ -1,14 +1,13 @@
 'use strict';
 
-var memoryGame = angular.module('memoryGame', ['flagMatchApp']);
+var memoryGame = angular.module('memoryGame', ['flagMatchApp', 'underscore']);
   
-memoryGame.controller('MemoryGameCtrl', ['$scope', 'Countries',
-
-  function ($scope, Countries) {
-    var memoryGameCtrl = this;
-
-    $scope.countries = Countries.query();
-    $scope.orderProp = 'name';
+memoryGame.controller('MemoryGameCtrl', ['$scope', 'Countries', '_',
+  function ($scope, Countries, _) {
+    Countries.query(function (data) {
+      $scope.random_countries = _.sample(data, 16);
+      $scope.orderProp = 'name';
+    });
   }
 
   ])

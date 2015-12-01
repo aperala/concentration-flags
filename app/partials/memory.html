@@ -4,8 +4,8 @@
   <h2>Match the flags</h2>
 
   <ul>
-    <li ng-repeat="country in countries | filter:query | orderBy:orderProp" >
-      <p>{{ country.name }}</p>
+    <li ng-repeat="country in random_countries" >
+      <p>{{ country.name }}, {{ country.alpha2 }}</p>
     </li>
   </ul>
   
