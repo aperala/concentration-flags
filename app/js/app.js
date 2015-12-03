@@ -11,6 +11,7 @@ angular.module('flagMatchApp', [
   'flagMatchApp.version',
   'ui.router',
   'ngResource',
+  'ngAnimate',
   'underscore',
   'memoryGame'
   ])

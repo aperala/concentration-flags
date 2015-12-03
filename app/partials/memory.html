@@ -1,12 +1,24 @@
-<div ng-app="flagMatchApp" class="container">
+<div ng-app="memoryGame" class="container">
   <div id="header">
     <a ui-sref="home">Home</a>
-    <h1>Concentration</h1>
-    <h2>Match the flags</h2>
+    <h1>Concentration: Match the Flags</h1>
   </div>
  
   <div id="grid-wrapper">
+    
     <div ng-repeat="country in random_countries" class="card-grid">
+
+      <flip-reveal name="country.name" url="'images/flags/' + country.alpha2.toLowerCase() + '.png'"></flip-reveal>        
+
+    </div>
+
+    <div ng-repeat="flag in match_countries" class="card-grid">
+
+      <flip-reveal name="flag.name" url="'images/flags/' + flag.alpha2.toLowerCase() + '.png'" ></flip-reveal>        
+
+    </div>
+
+   <!--  <div ng-repeat="country in random_countries" class="flipcard">
       <div class="front"> 
       </div> 
       <div class="back">
@@ -15,7 +27,17 @@
         </div>
       </div> 
     </div>
-  </div>
+
+    <div ng-repeat="country in match_countries" class="flipcard">
+      <div class="front"> 
+      </div> 
+      <div class="back">
+        <div class="flag-holder" ng-style="{ 'background-image': 'url(images/flags/' + country.alpha2.toLowerCase() + '.png'}">
+          {{ country.name }}
+        </div>
+      </div> 
+    </div> -->
+  </div> <!-- end wrapper -->
 
   
 </div>
