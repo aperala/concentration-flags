@@ -3,9 +3,17 @@ angular.module('flagMatchApp')
     var playersRef = new Firebase(FirebaseUrl+'players');
     var players = $firebaseArray(playersRef);
 
-    var Players = {};
+    var Players = {
+      getProfile: function(uid) {
+        return $firebaseObject(playersRef.child(uid));
+      },
+      getName: function(uid) {
+        return players.$getRecord(uid).name;
+      },
+      all: players
+    };
 
-    return players;
+    return playersRef;
   })
 
   

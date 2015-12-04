@@ -1,0 +1,25 @@
+<div ng-app="flagMatchApp" class="container">
+  <div id="header">
+    <a ui-sref="home">Home</a>
+    <h1>Match the Flags</h1>
+    <p class="player-name">Player: {{ memoryGameCtrl.player }}</p>
+  </div>
+ 
+  <div id="grid-wrapper">
+    
+    <div ng-repeat="country in random_countries" class="card-grid">
+
+      <flip-reveal name="country.name" url="'images/flags/' + country.alpha2.toLowerCase() + '.png'"></flip-reveal>        
+
+    </div>
+
+    <div ng-repeat="flag in match_countries" class="card-grid">
+
+      <flip-reveal name="flag.name" url="'images/flags/' + flag.alpha2.toLowerCase() + '.png'" ></flip-reveal>        
+
+    </div>
+
+  </div> <!-- end wrapper -->
+
+  
+</div>

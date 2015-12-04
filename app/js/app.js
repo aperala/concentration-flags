@@ -20,12 +20,12 @@ angular.module('flagMatchApp', [
     .state('home', {
       url: '/',
       controller: "AuthCtrl as authCtrl",
-      templateUrl: 'partials/home.html'
+      templateUrl: 'auth/home.html'
     })
     .state('memory', {
       url: '/memory',
       controller: "MemoryGameCtrl as memoryGameCtrl",
-      templateUrl: 'partials/memory.html'
+      templateUrl: 'games/memory.html'
     })
   $urlRouterProvider.otherwise('/');
   })

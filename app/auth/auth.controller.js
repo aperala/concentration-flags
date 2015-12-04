@@ -1,15 +1,21 @@
 'use strict';
 
 angular.module('flagMatchApp')
-  .controller('AuthCtrl', function ($state, Auth, $scope, Players){
+  .controller('AuthCtrl', function ($state, Auth, $scope, Players, $rootScope, $firebaseObject){
     var authCtrl = this;
   
     var createPlayer = function(id, name) {
       var players = Players;
-      players.$add({
-        uid: id,
-        name: name
-      });
+      players.child(id).set({
+      displayName: name,
+      turns: 0
+    });
+
+    }
+
+
+    var setCurrentPlayer = function(player){      
+      $rootScope.currentPlayer = player;
     }
 
     authCtrl.login = function() {
@@ -17,8 +23,9 @@ angular.module('flagMatchApp')
       $scope.error = null;
 
       Auth.authAnonymously(function (error, authData) {
-        createPlayer(authData.uid, authCtrl.players.name);
 
+        createPlayer(authData.uid, authCtrl.players.name);
+        // .$onAuth(setCurrentPlayer(data));
         $state.go('memory');
       }), (function (error){
         console.log("There was an error", error);
