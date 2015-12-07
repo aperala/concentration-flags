@@ -9,11 +9,13 @@
     <span>{{ authCtrl.error }}</span>
   </div>
 
-  <form ng-submit="authCtrl.login()">
+  <form ng-submit="login()">
     <div class="input-group">
       <input type="text" class="form-control" placeholder="enter a username" ng-model="authCtrl.players.name" required>
     </div>
     <input type="submit" class="btn" value="PLAY">
   </form>
   
+  <p ng-if="authData">Logged in user: <strong>{{ authData.uid }}</strong></p>
+
 </div>

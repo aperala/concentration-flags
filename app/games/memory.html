@@ -1,8 +1,10 @@
-<div ng-app="flagMatchApp" class="container">
+<div ng-app="flagMatchApp" class="container" ng-controller="MemoryGameCtrl as memoryGameCtrl">
   <div id="header">
     <a ui-sref="home">Home</a>
     <h1>Match the Flags</h1>
-    <p class="player-name">Player: {{ memoryGameCtrl.player }}</p>
+    <p ng-if="authData">{{authData.uid}}</p>
+    <p class="player-name">Player: {{ player.displayName }} 
+    <span id="turn-count">    Turns: {{ player.turns }}</span></p>
   </div>
  
   <div id="grid-wrapper">

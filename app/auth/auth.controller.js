@@ -13,23 +13,20 @@ angular.module('flagMatchApp')
 
     }
 
-
-    var setCurrentPlayer = function(player){      
-      $rootScope.currentPlayer = player;
-    }
-
-    authCtrl.login = function() {
+    $scope.login = function() {
       $scope.authData = null;
       $scope.error = null;
 
-      Auth.authAnonymously(function (error, authData) {
-
+      Auth.$authAnonymously().then(function (authData) {
+        $rootScope.authData = authData;
         createPlayer(authData.uid, authCtrl.players.name);
-        // .$onAuth(setCurrentPlayer(data));
-        $state.go('memory');
+        console.log($rootScope.authData);
+        $state.go('memory');        
       }), (function (error){
+        $scope.error = error;
         console.log("There was an error", error);
       });
+     
     };
 
   });
