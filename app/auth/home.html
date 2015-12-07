@@ -2,20 +2,20 @@
 
   <div class="jumbotron">
   <h1>Flag Match Game</h1>
-  <p>Part 1: A game of concentration to test your memory</p>
-  <p>Part 2: A quiz to test your knowledge of world flags</p>
+  <p>A game of concentration to test your memory</p>
   </div>
 
   <div ng-show="authCtrl.error">
     <span>{{ authCtrl.error }}</span>
   </div>
 
-  <form ng-submit="authCtrl.login()">
+  <form ng-submit="login()">
     <div class="input-group">
       <input type="text" class="form-control" placeholder="enter a username" ng-model="authCtrl.players.name" required>
     </div>
-    <div class="player-name">{{ authCtrl.players.name }}</div>
     <input type="submit" class="btn" value="PLAY">
   </form>
   
+  <p ng-if="authData">Logged in user: <strong>{{ authData.uid }}</strong></p>
+
 </div>

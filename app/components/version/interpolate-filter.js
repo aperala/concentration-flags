@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('concentrationFlags.version.interpolate-filter', [])
+angular.module('flagMatchApp.version.interpolate-filter', [])
 
 .filter('interpolate', ['version', function(version) {
   return function(text) {

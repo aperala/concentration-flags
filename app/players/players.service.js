@@ -1,11 +1,8 @@
 angular.module('flagMatchApp')
-  .factory('Players', function ($firebaseArray, $firebaseObject, FirebaseUrl){
-    var playersRef = new Firebase(FirebaseUrl+'players');
-    var players = $firebaseArray(playersRef);
+  .factory('Players', function ($firebaseObject, FirebaseUrl){
+    var playersRef = new Firebase(FirebaseUrl+'players/');
 
-    var Players = {};
-
-    return players;
+    return playersRef;
   })
 
   

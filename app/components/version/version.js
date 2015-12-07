@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('concentrationFlags.version', [
-  'concentrationFlags.version.interpolate-filter',
-  'concentrationFlags.version.version-directive'
+angular.module('flagMatchApp.version', [
+  'flagMatchApp.version.interpolate-filter',
+  'flagMatchApp.version.version-directive'
 ])
 
 .value('version', '0.1');

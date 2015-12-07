@@ -1,6 +1,6 @@
 'use strict';
 
-describe('myApp.version module', function() {
+describe('flagMatchApp.version module', function() {
   beforeEach(module('concentrationFlags.version'));
 
   describe('interpolate filter', function() {
